@@ -1,0 +1,189 @@
+/* HTML in general */
+ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,body,html,p,blockquote,fieldset,input{
+    margin:0;
+    padding:0;
+}
+
+/* Nice background colors:
+ * #FAF5F5
+ */
+body {
+    background-color: #FAF7F5;
+    font-family: 'PT Sans', 'Lato', sans-serif;
+    font-size: 16px;
+    color: #545454;
+    line-height: 20px;
+}
+
+table {
+    background-color: #FAF7F5;
+    padding-top: 60px;
+    padding-bottom: 20px;
+    font-size: 87.5%;
+    width: 700px;
+}
+
+/* adjust screen size for mobile devices. */
+@media only screen and (max-width: 800px) {
+    table {
+       	width: 70%;
+    }
+}
+
+/* ******************  Misc. Classes ****************** */
+.signature{
+    border-bottom: 2px #586e75 dotted;
+}
+
+p.contact {
+    text-align: left;
+    font-size: 80%;
+    color: gray;
+}
+
+.auth{
+    /* color: #93a1a1; */
+}
+
+/* ****************** Header ****************** */
+
+h1 {
+    line-height: 56px;
+    font-family: 'Roboto Slab', serif;
+    display: inline;
+    font-size: 240%;
+    font-weight: 400;
+    color: #414141;
+    text-decoration: none;
+}
+
+h2 {
+    display: inline;
+    font-family: 'Roboto', sans-serif;
+    font-size: 130%;
+    font-weight: 500;
+    color: #414141;
+    text-decoration: none;
+}
+
+/* ****************** Links ******************
+ * blue 1: #7694a7
+ * blue 2: #39c
+ */
+
+a {
+    color: #39c;
+    text-decoration: none;
+}
+
+a:link {
+    color: #39c;
+    text-decoration: none
+}
+
+a:visited {
+    color: #39c;
+    text-decoration: none
+}
+
+a:active {
+    color: #939393;
+    text-decoration: none
+}
+
+a:hover {
+    border-bottom: 2px dotted #939393;
+    color: #939393;
+    text-decoration: none
+}
+
+/* publisher links */
+a.publisher {
+}
+
+a.publisher:link {
+    display: inline;		
+}
+
+a.publisher:visted {}
+
+a.publisher:active {}
+
+a.publisher:hover {}
+
+/* paper title links */
+a.paper_title {
+    font-style: italic;
+	/* font-weight: bold; */
+    color: #545454;
+    text-decoration: none;
+}
+
+a.paper_title:link {
+    color: #545454;
+    text-decoration: none
+}
+
+a.paper_title:visited {
+    color: #545454;
+    text-decoration: none
+}
+
+a.paper_title:active {
+    color: #939393;
+    text-decoration: none
+}
+
+a.paper_title:hover {
+	border-bottom: 2px dotted #939393;
+    color: #939393;
+    text-decoration: none
+}
+
+/* ****************** Weebly ****************** */
+
+#wrapper  {
+    width:100%;
+    margin:0pt auto;
+}
+
+#main {
+    position:relative;
+    width:100%;
+    margin:0pt auto;
+}
+
+#header  {
+    float:left;
+    width:100%;
+    height:80px;
+}
+
+#sitename {
+    color:#fff;
+    padding-top:30px;
+    padding-left:13px;
+    font-size:26px;
+}
+
+#content-main  {
+    float:left;
+    width:100%;
+    height:auto !important;
+    min-height:400px;
+}
+
+#content-wrapper {
+    float:left;
+    width:100%;
+}
+
+#content  {
+    float:left;
+    width:100%;
+}
+
+* {
+    -webkit-text-size-adjust: none;
+}
+
