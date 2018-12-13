@@ -19,15 +19,8 @@ table {
   background-color: #FAF7F5;
   padding-top: 60px;
   padding-bottom: 20px;
-  font-size: 80%;
-  width: 700px;
-}
-
-/* adjust screen size for mobile devices. */
-@media only screen and (max-width: 750px) {
-  table {
-    width: 70%;
-  }
+  font-size: 81%;
+  width: 650px;
 }
 
 /* ******************  Misc. Classes ****************** */
