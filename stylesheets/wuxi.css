@@ -127,3 +127,8 @@ a.paper_title:hover {
   color: #939393;
   text-decoration: none
 }
+
+.no-touchevents .btnsubmit:hover {
+    background-color: #ffffff; 
+    color: #000000;
+}
