@@ -69,19 +69,9 @@ h2 {
  * blue 2: #39c
  */
 
-a {
+a, a:link, a:visited {
   color: #8c1515;
   text-decoration: none;
-}
-
-a:link {
-  color: #8c1515;
-  text-decoration: none
-}
-
-a:visited {
-  color: #8c1515;
-  text-decoration: none
 }
 
 a:active {
