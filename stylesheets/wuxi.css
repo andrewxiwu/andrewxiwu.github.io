@@ -11,6 +11,8 @@ body {
   background-color: #FAF7F5;
   font-family: 'open-sans', sans-serif;
   font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
   color: #333;
   line-height: 20px;
 }
