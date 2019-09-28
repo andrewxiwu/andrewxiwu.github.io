@@ -9,11 +9,11 @@ ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,body,html,p,blockquote,fieldset,input{
  */
 body {
   background-color: #FAF7F5;
-  font-family: 'lato', sans-serif;
+  font-family: 'muli', sans-serif;
   font-size: 12.8px;
   font-style: normal;
   font-weight: 400;
-  color: #333;
+  color: #515151;
   line-height: 20px;
 }
 
@@ -105,17 +105,17 @@ a.publisher:hover {}
 a.paper_title {
   font-style: italic;
   /* font-weight: bold; */
-  color: #333;
+  color: #515151;
   text-decoration: none;
 }
 
 a.paper_title:link {
-  color: #333;
+  color: #515151;
   text-decoration: none
 }
 
 a.paper_title:visited {
-  color: #333;
+  color: #515151;
   text-decoration: none
 }
 
