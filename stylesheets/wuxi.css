@@ -9,7 +9,7 @@ ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,body,html,p,blockquote,fieldset,input{
  */
 body {
   background-color: #FAF7F5;
-  font-family: 'lato', sans-serif;
+  font-family: 'Quattrocento Sans', sans-serif;
   font-size: 12.8px;
   font-style: normal;
   font-weight: 400;
@@ -103,8 +103,8 @@ a.publisher:hover {}
 
 /* paper title links */
 a.paper_title {
-  font-style: italic;
-  /* font-weight: bold; */
+  /* font-style: italic; */
+  font-weight: bold;
   color: #515151;
   text-decoration: none;
 }
