@@ -10,7 +10,7 @@ ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,body,html,p,blockquote,fieldset,input{
 body {
   background-color: #FAF7F5;
   font-family: 'Quattrocento Sans', sans-serif;
-  font-size: 13px;
+  font-size: 12.8px;
   font-style: normal;
   font-weight: 400;
   color: #515151;
@@ -103,19 +103,18 @@ a.publisher:hover {}
 
 /* paper title links */
 a.paper_title {
-  font-style: italic;
-  font-weight: bold;
-  color: #515151;
+  /* font-weight: bold; */
+  color: #313131;
   text-decoration: none;
 }
 
 a.paper_title:link {
-  color: #515151;
+  color: #313131;
   text-decoration: none
 }
 
 a.paper_title:visited {
-  color: #515151;
+  color: #313131;
   text-decoration: none
 }
 
