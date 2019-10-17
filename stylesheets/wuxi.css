@@ -9,12 +9,12 @@ ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,body,html,p,blockquote,fieldset,input{
  */
 body {
   background-color: #FAF7F5;
-  font-family: 'PT Sans', sans-serif;
-  font-size: 13.8px;
+  font-family: 'Noto Sans SC', sans-serif;
+  font-size: 12.4px;
   font-style: normal;
   font-weight: 400;
   color: #515151;
-  line-height: 21px;
+  line-height: 20px;
 }
 
 table {
