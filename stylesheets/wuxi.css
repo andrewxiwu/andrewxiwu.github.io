@@ -25,13 +25,6 @@ table {
   width: 40%;
 }
 
-/* adjust screen size for mobile devices. */
-@media only screen and (max-width: 800px) {
-  table {
-    width: 100%;
-  }
-}
-
 /* ******************  Misc. Classes ****************** */
 .signature{
   border-bottom: 2px #586e75 dotted;
