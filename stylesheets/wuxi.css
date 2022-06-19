@@ -4,12 +4,16 @@ ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,body,html,p,blockquote,fieldset,input{
   padding:0;
 }
 
-/* Nice background colors:
- * #FAF5F5
- */
+/* Fonts */
+@font-face {
+  font-family: GoogleSans;
+  src: url("../fonts/GoogleSans-Regular.ttf") format('truetype');
+}
+
+/* Nice background colors: #FAF5F5 */
 body {
   background-color: #FAF7F5;
-  font-family: myriad-pro, sans-serif;
+  font-family: GoogleSans, myriad-pro, sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 100%;
