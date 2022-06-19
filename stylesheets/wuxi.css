@@ -22,13 +22,13 @@ table {
   background-color: #FAF7F5;
   padding-top: 60px;
   padding-bottom: 20px;
-  width: 837.5px;
+  width: 40%;
 }
 
 /* adjust screen size for mobile devices. */
 @media only screen and (max-width: 800px) {
   table {
-    width: 60%;
+    width: 40%;
   }
 }
 
