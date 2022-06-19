@@ -17,15 +17,14 @@ body {
   line-height: 26.25px;
 }
 
+content {
+  width: 80%
+}
+
 table {
   background-color: #FAF7F5;
   padding-top: 60px;
   padding-bottom: 20px;
-  width: 40%;
-}
-
-content {
-  width: 80%
 }
 
 /* ******************  Misc. Classes ****************** */
