@@ -2,7 +2,6 @@
 ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,body,html,p,blockquote,fieldset,input{
   margin:0;
   padding:0;
-  overflow-x: hidden;
 }
 
 /* Nice background colors:
@@ -22,7 +21,7 @@ table {
   background-color: #FAF7F5;
   padding-top: 60px;
   padding-bottom: 20px;
-  width: 50%;
+  width: 40%;
 }
 
 /* ******************  Misc. Classes ****************** */
