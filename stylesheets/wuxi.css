@@ -24,6 +24,10 @@ table {
   width: 40%;
 }
 
+content {
+  width: 80%
+}
+
 /* ******************  Misc. Classes ****************** */
 .signature{
   border-bottom: 2px #586e75 dotted;
