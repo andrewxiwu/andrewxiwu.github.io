@@ -13,7 +13,7 @@ ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,body,html,p,blockquote,fieldset,input{
 /* Nice background colors: #FAF5F5 */
 body {
   background-color: #FAF7F5;
-  font-family: GoogleSans, myriad-pro, sans-serif;
+  font-family: myriad-pro, sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 90%;
@@ -56,7 +56,7 @@ h1 {
   line-height: 56px;
   font-family: 'Roboto Slab', serif;
   display: inline;
-  font-size: 250%;
+  font-size: 270%;
   font-weight: 400;
   color: #414141;
   text-decoration: none;
@@ -64,9 +64,9 @@ h1 {
 
 h2 {
   display: inline;
-  font-family: 'Roboto', sans-serif;
+  font-family: GoogleSans, 'Roboto', sans-serif;
   font-size: 130%;
-  font-weight: 500;
+  font-weight: 600;
   color: #414141;
   text-decoration: none;
 }
