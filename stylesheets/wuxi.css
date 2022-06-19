@@ -22,16 +22,8 @@ table {
   padding-top: 60px;
   padding-bottom: 20px;
   /* For mobile devices, we cap the width to be 70% */
-  max-width: 70%;
+  /* max-width: 70%; */
   width: 800px;
-}
-
-@media only screen and (max-width: 480px) {
-    /* horizontal scrollbar for tables if mobile screen */
-    .tablemobile {
-        overflow-x: auto;
-        display: block;
-    }
 }
 
 /* ******************  Misc. Classes ****************** */
