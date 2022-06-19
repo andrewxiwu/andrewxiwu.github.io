@@ -26,7 +26,9 @@ div.main {
 
 table {
   background-color: #FAF7F5;
+  /* An absolute width control if viewport is too wide. */
   max-width: 800px;
+  /* table width is 80% of the viewport width, this is critical */
   width: 80vw;  
 }
 
