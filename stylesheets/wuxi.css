@@ -25,9 +25,9 @@ table {
 }
 
 /* adjust screen size for mobile devices. */
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 800px) {
   table {
-    width: 70%;
+    width: 60%;
   }
 }
 
