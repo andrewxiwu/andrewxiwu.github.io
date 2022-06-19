@@ -23,6 +23,7 @@ table {
   background-color: #FAF7F5;
   padding-top: 60px;
   padding-bottom: 20px;
+  /* For mobile devices, we cap the width to be 70% */
   max-width: 70%;
   width: 800px;
 }
