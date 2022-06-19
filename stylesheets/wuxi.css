@@ -21,14 +21,12 @@ div.main {
   background-color: #FAF7F5;
   padding-top: 60px;
   padding-bottom: 20px;
-  width: 80%;
+  width: 40%;
   margin: auto;
 }
 
 table {
   background-color: #FAF7F5;
-  max-width: 80%;
-  width: 800px;
 }
 
 /* ******************  Misc. Classes ****************** */
