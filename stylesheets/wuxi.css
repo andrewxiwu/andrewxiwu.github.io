@@ -2,6 +2,7 @@
 ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,body,html,p,blockquote,fieldset,input{
   margin:0;
   padding:0;
+  overflow-x: hidden;
 }
 
 /* Nice background colors:
@@ -15,7 +16,6 @@ body {
   font-size: 16.25px;
   color: #727272;
   line-height: 26.25px;
-  overflow-x: hidden;
 }
 
 table {
