@@ -15,14 +15,16 @@ body {
   font-size: 100%;
   color: #727272;
   line-height: 26.25px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 table {
   background-color: #FAF7F5;
   padding-top: 60px;
   padding-bottom: 20px;
-  max-width:800px;
-  width: 40%;
+  max-width: 60%;
+  width: 800px;
 }
 
 /* ******************  Misc. Classes ****************** */
