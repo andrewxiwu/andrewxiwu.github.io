@@ -4,37 +4,12 @@ ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,body,html,p,blockquote,fieldset,input{
   padding:0;
 }
 
-/* ********** Fonts ********** */
-/* GoogleSans */
-@font-face {
-  font-family: GoogleSans-Regular;
-  src: url("../fonts/WOFF2/GoogleSans/GoogleSans-Regular.woff2") format('woff2');
-}
-
-/* GoogleSansDisplay */
-@font-face {
-  font-family: GoogleSansDisplay-Regular;
-  src: url("../fonts/WOFF2/GoogleSansDisplay/GoogleSansDisplay-Regular.woff2") format('woff2');
-}
-
-/* GoogleSansText */
-@font-face {
-  font-family: GoogleSansText-Regular;
-  src: url("../fonts/WOFF2/GoogleSansText/GoogleSansText-Regular.woff2") format('woff2');
-}
-
-/* SF-Pro-Text-Regular */
-@font-face {
-  font-family: SF-Pro-Text-Regular;
-  src: url("../fonts/WOFF/SF-Pro-Text-Regular.woff") format('woff');
-}
-
 /* ************************** */
 
 /* Nice background colors: #FAF5F5 */
 body {
   background-color: #FAF7F5;
-  font-family: SF-Pro-Text-Regular, myriad-pro, sans-serif;
+  font-family: myriad-pro, sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 90%;
@@ -85,7 +60,7 @@ h1 {
 
 h2 {
   display: inline;
-  font-family: GoogleSansDisplay-Regular, 'Roboto', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 150%;
   font-weight: 600;
   color: #414141;
