@@ -22,12 +22,19 @@ ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,body,html,p,blockquote,fieldset,input{
   font-family: GoogleSansText-Regular;
   src: url("../fonts/WOFF2/GoogleSansText/GoogleSansText-Regular.woff2") format('woff2');
 }
+
+/* SF-Pro */
+@font-face {
+  font-family: SF-Pro;
+  src: url("../fonts/TTF/SF-Pro.ttf") format('ttf');
+}
+
 /* ************************** */
 
 /* Nice background colors: #FAF5F5 */
 body {
   background-color: #FAF7F5;
-  font-family: myriad-pro, sans-serif;
+  font-family: SF-Pro, myriad-pro, sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 100%;
