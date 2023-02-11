@@ -33,8 +33,12 @@ table {
 }
 
 /* ******************  Misc. Classes ****************** */
-.signature{
+.signature {
   border-bottom: 2px #586e75 dotted;
+}
+
+p {
+    padding-bottom: 10px;
 }
 
 p.contact {
