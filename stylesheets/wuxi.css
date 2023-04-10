@@ -13,7 +13,7 @@ body {
   font-weight: 400;
   font-style: normal;
   font-size: 95%;
-  color: #595959;
+  color: #515151;
   line-height: 24px;
 }
 
@@ -27,7 +27,7 @@ div.main {
 table {
   background-color: #FAF7F5;
   /* An absolute width control if viewport is too wide. */
-  max-width: 770px;
+  max-width: 740px;
   /* table width is 80% of the viewport width, this is critical */
   width: 80vw;  
 }
