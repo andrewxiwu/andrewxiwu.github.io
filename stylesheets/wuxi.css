@@ -37,6 +37,10 @@ table {
   border-bottom: 2px #586e75 dotted;
 }
 
+b {
+    font-weight: 600;
+}
+
 p {
     padding-bottom: 10px;
 }
