@@ -17,13 +17,17 @@ body {
   line-height: 1.5vw;
 }
 
+@media all and (max-width: 320px) {
+  .mobile-only {
+      zoom: 100%;
+  }
+}
+
 div.main {
   background-color: #FAF7F5;
   margin: auto;
   padding-top: 5vh;
   padding-bottom: 5vh;
-  padding-left: 1px;
-  padding-right: 1px;
 }
 
 table {
