@@ -12,25 +12,24 @@ body {
   font-family: "source-sans-3", "Noto Sans", sans-serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 90%;
+  font-size: .95vw;
   color: #595959;
-  line-height: 24px;
-  zoom: 125%;			/* Use this to scale everything simultaneously! */
+  line-height: 1.5vw;
 }
 
 div.main {
   background-color: #FAF7F5;
   margin: auto;
-  padding-top: 4vh;
-  padding-bottom: 4vh;
+  padding-top: 5vh;
+  padding-bottom: 5vh;
 }
 
 table {
   background-color: #FAF7F5;
   /* An absolute width control if viewport is too wide. */
-  max-width: 740px;
+  max-width: 900px;
   /* table width is 80% of the viewport width, this is critical */
-  width: 80vw;  
+  width: 60vw;
 }
 
 /* ******************  Misc. Classes ****************** */
