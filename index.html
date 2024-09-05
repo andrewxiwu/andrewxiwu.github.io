@@ -17,6 +17,9 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="favicon.ico"/>
+    <script type="text/javascript" id="MathJax-script" async
+	    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
   </head>
 
   <body>
@@ -51,10 +54,14 @@
 	      the search for data insights easy and efficient.
 	      A main theme of my work is Multi-Relational Algebra, which extends the classic Relational Algebra
 	      to many-to-many transformations of tables (the classic relational algebra provides one-to-one
-	      and many-to-one transformations).
-	      Specifically, Multi-Relational Algebra introduces MultiRelation,
-	      and three new fundamental algebraic operators, MultiSelect, MultiProject, and MultiJoin,
-	      which lift their counterparts Select,Project, and Join to transform MultiRelation to MultiRelation.
+	      and many-to-one transformations). Multi-Relational Algebra has two main characteristics:
+	      <b>(1) Information Unit.</b>
+	      The information unit is a slice \((r,X)\), where \(r\) is a (region) tuple, and \(X\) is a (feature) table.
+	      Specifically, a slice can encompass multiple columns, which surpasses the information unit of "a single tuple" or
+	      "a group of tuples of one column" in the classic relational algebra,
+	      <b>(2) Schema Flexibility.</b>
+	      Slices can have varying schemas, not constrained to a single schema.
+	      This flexibility further expands the expressive power of the algebra.
 	      Multi-Relational Algebra has found numerous applications at Google, especially for building
 	      data-insight applications. For more details, please refer to our
 	      <a href="https://arxiv.org/abs/2311.04824" target="_blank">
