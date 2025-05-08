@@ -40,33 +40,32 @@
 	<tr>
 	  <td colspan="2">
 	    <p>
-	    I joined Google in 2016.
+	      I am an engineer at Google Madison, where I lead a team building novel analytic infrastructure to make data insight
+	      discovery faster and more efficient. A central theme of my work is <b>Multi-Relational Algebra (MRA)</b>,
+	      which extends classical relational algebra to support many-to-many transformations over collections of tables.
+	      MRA introduces two key innovations:
+	      <b>(1) Information Unit.</b>
+	      In contrast to classical relational algebra, where the unit of data is a tuple,
+	      MRA adopts the slice tuple—a structure of the form
+	      \((r,X_1, \dots, X_k)\), where \(r\) is a <em>region</em> tuple which forms the key of the tuple,
+	      and \(X_1, \dots, X_k\) are <em>feature</em> tables.
+	      This allows the algebra to naturally represent multi-faceted views of an entity—each with its own schema
+	      and granularity.
+	      <b>(2) Schema Flexibility.</b>
+	      Slice tuples can include feature tables with heterogeneous schemas, freeing the algebra from the constraints of
+	      fixed-schema tables. This flexibility significantly expands the expressive power of MRA for complex analytical tasks.
+	      MRA is foundational to many of our data insight applications at Google. To learn more, please see our
+	      <a href="https://arxiv.org/abs/2311.04824" target="_blank">
+		manuscript
+	      </a>.
+	    </p>
+	    <p>
+	    Before joining Google,
 	    I received my Ph.D. in Computer Science from University of Wisconsin-Madison,
 	    advised by Jeffrey F. Naughton and Somesh Jha. I was awarded a
 	    <a href="http://googleresearch.blogspot.com/2016/03/announcing-2016-google-phd-fellows-for.html" target="_blank">
 	      Google PhD Fellowship
-	    </a> in 2016 (Privacy and Security).
-	    </p>
-	    <p>
-	      <b>Multi-Relational Algebra</b>.
-	      Modern data is big and complex.
-	      At Google, I lead a team to build novel analytic infrastructure to make
-	      the search for data insights easy and efficient.
-	      A main theme of my work is Multi-Relational Algebra, which extends the classic Relational Algebra
-	      to many-to-many transformations of tables (the classic relational algebra provides one-to-one
-	      and many-to-one transformations). Multi-Relational Algebra has two main characteristics:
-	      <b>(1) Information Unit.</b>
-	      The information unit is a slice \((r,X)\), where \(r\) is a (region) tuple, and \(X\) is a (feature) table.
-	      Specifically, a slice can encompass multiple columns, which surpasses the information unit of "a single tuple" or
-	      "a group of tuples of one column" in the classic relational algebra,
-	      <b>(2) Schema Flexibility.</b>
-	      Slices can have varying schemas, not constrained to a single schema.
-	      This flexibility further expands the expressive power of the algebra.
-	      Multi-Relational Algebra has found numerous applications at Google, especially for building
-	      data-insight applications. For more details, please refer to our
-	      <a href="https://arxiv.org/abs/2311.04824" target="_blank">
-		manuscript
-	      </a>.
+	    </a> in 2016.
 	    </p>
 	  </td>
 	</tr>
