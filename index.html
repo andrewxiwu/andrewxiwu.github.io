@@ -47,21 +47,17 @@
 	      Future of Data Science, Goolge Cloud Next 2025.
 	    </p>
 	    <p>
-	      <b>Multi-Relational Algebra (MRA)</b>. As a foundation of our work, we developed Multi-Relational Algebra,
+	      <a href="https://arxiv.org/abs/2311.04824" target="_blank"><b>Multi-Relational Algebra (MRA)</b></a>.
+	      As a core part of our work, we developed Multi-Relational Algebra,
 	      which extends classical relational algebra to support many-to-many transformations over collections of tables.
-	      MRA introduces two key innovations:
-	      <b>(1) Richer Information Unit.</b>
-	      In contrast to classical relational algebra, where the unit of data is a tuple,
-	      MRA adopts the slice tuple—a structure of the form
-	      \((r,X_1, \dots, X_k)\), where \(r\) is a <em>region</em> tuple which forms the key of the tuple,
-	      and \(X_1, \dots, X_k\) are <em>feature</em> tables.
-	      This allows the algebra to naturally represent multi-aspect views of an entity across different granularities.
-	      <b>(2) Schema Flexibility.</b>
-	      Slice tuples can include feature tables with heterogeneous schemas, freeing the algebra from the constraints of
-	      fixed-schema tables. This flexibility significantly expands the expressive power of MRA for complex analytical tasks.
-	      MRA is foundational to many of our data insight applications at Google. To learn more, please see our
-	      <a href="https://arxiv.org/abs/2311.04824" target="_blank">
-		manuscript</a>.
+	      Specifically, MRA extends the data model of the classic relational algebra with two novel data objects:
+	      <b>RelationSpace</b>, inspired by OLAP cube, which models a set of relations that can be identified
+	      by a set of dimensions, and <b>SliceRelation</b>, which is inspired by nested relational model,
+	      which models a set of <em>slice tuples</em>, where each slice tuple is key by a classic tuple called <em>region</em>,
+	      and constains a set of columns, each storing a nested table. MRA also extends the classic relational algebra
+	      with a set of novel operators for manipulating and transforming relation spaces and slice relations.
+	      These constructs enable MRA to compactly represent and compute over sets of relations, in a manner that is
+	      aligned with modern analysis needs.
 	    </p>
 	    <p>
 	    Prior to Google, I received my Ph.D. in Computer Science from University of Wisconsin-Madison,
