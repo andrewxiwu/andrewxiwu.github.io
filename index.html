@@ -55,12 +55,12 @@
 	    <p>
 	      <a href="https://arxiv.org/abs/2311.04824" target="_blank"><b>Multi-Relational Algebra (MRA)</b></a>.
 	      As a core part of our work at Google, we developed Multi-Relational Algebra,
-	      which extends classical relational algebra to support many-to-many transformations over collections of tables.
+	      which extends classical relational algebra to support many-to-many transformations over sets of relations.
 	      Specifically, MRA extends the data model of the classic relational algebra with two novel data objects:
 	      <b>RelationSpace</b>, inspired by the OLAP cube, which models a set of relations that can be identified
 	      by a set of dimensions, and <b>SliceRelation</b>, inspired by nested relational model,
 	      which models a set of <em>slice tuples</em>, where each slice tuple is keyed by a classic tuple called <em>region</em>,
-	      and contains a set of columns, each storing a nested table. MRA also extends the classic relational algebra
+	      and contains a set of columns, each storing a nested relation. MRA also extends the classic relational algebra
 	      with a set of novel operators for manipulating and transforming relation spaces and slice relations.
 	      These constructs enable MRA to compactly represent and compute over sets of relations, in a manner that is
 	      aligned with modern analysis needs.
