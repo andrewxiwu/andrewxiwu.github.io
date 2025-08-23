@@ -9,7 +9,7 @@ ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,body,html,p,blockquote,fieldset,input{
 /* Nice background colors: #FAF5F5 */
 body {
   background-color: #FAF7F5;
-  font-family: "Inter", "Roboto", "source-sans-3", "Calibri",  sans-serif;
+  font-family: "rival-sans", "Inter", "Roboto", "source-sans-3", "Calibri",  sans-serif;
   font-weight: 400;
   font-style: normal;
   font-optical-sizing: auto;
@@ -35,7 +35,7 @@ div.main {
 table {
   background-color: #FAF7F5;
   /* An absolute width control if viewport is too wide. */
-  max-width: 720px;
+  max-width: 700px;
   /* table width is 80% of the viewport width, this is critical */
   width: 60vw;
 }
