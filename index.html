@@ -50,17 +50,26 @@
 	      machine learning and trustworthy AI; please refer to my publications for details.
 	    </p>
 	    <p>
-	      <a href="https://arxiv.org/abs/2311.04824" target="_blank"><b>Multi-Relational Algebra (MRA)</b></a>.
-	      As a core part of our work at Google, we developed Multi-Relational Algebra,
-	      which extends classical relational algebra to support many-to-many transformations over sets of relations.
-	      Specifically, MRA extends the data model of the classic relational algebra with two novel data abstractions:
-	      <b>RelationSpace</b>, inspired by the OLAP cube, which models a set of relations that can be identified
-	      by a set of dimensions, and <b>SliceRelation</b>, inspired by nested relational model,
-	      which models a set of <em>slice tuples</em>, where each slice tuple is keyed by a classic tuple called <em>region</em>,
-	      and contains a set of columns, each storing a nested relation. MRA also extends the classic relational algebra
-	      with a set of novel operators for manipulating and transforming relation spaces and slice relations.
-	      These constructs enable MRA to compactly represent and compute over sets of relations, in a manner that is
-	      aligned with modern analysis needs.
+	      <a href="https://arxiv.org/abs/2311.04824" target="_blank">
+		<b>Multi-Relational Algebra (MRA)</b>
+	      </a>.
+	      As part of our work at Google, we developed Multi-Relational Algebra (MRA),
+	      a minimal and fully compatible extension to relational algebra designed to
+	      address the challenges of entity-centric, multi-granular analytics. MRA
+	      introduces two new data abstractions that allow analysts to reason over
+	      collections of relations. First, the <b>RelationSpace</b> formalizes the
+	      common practice of managing multiple, pre-aggregated tables (materialized
+	      views) at different granularities. It replaces ad-hoc table names with a
+	      principled, schema-level addressing mechanism based on a small set of
+	      designated <b>dimension</b> attributes. Second, the <b>SliceRelation</b>
+	      restructures data into an entity-centric format, aligning each entity
+	      (modeled as a classic tuple called a <em>region</em>) with its multiple,
+	      relation-valued features of different granularities. A key innovation is
+	      that while the classic nested relational model identifies nested relations
+	      by arbitrary attribute names, a <b>SliceRelation</b> identifies a
+	      feature table by the intrinsic dimensional footprint of its schema.
+	      This enables a rich set of operators for composing complex analyses
+	      in a declarative, intuitive, and optimizable way.
 	    </p>
 	    <p>
 	      Prior to Google, I received my Ph.D. in Computer Science from the University of Wisconsin-Madison,
