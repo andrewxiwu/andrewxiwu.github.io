@@ -61,12 +61,12 @@
 	      common practice of managing multiple, pre-aggregated tables (materialized
 	      views) at different granularities. It replaces ad-hoc table names with a
 	      principled, schema-level addressing mechanism based on a small set of
-	      designated <b>dimension</b> attributes. Second, the <b>SliceRelation</b>
+	      designated <em>dimension</em> attributes. Second, the <b>SliceRelation</b>
 	      restructures data into an entity-centric format, aligning each entity
 	      (modeled as a classic tuple called a <em>region</em>) with its multiple,
 	      relation-valued features of different granularities. A key innovation is
 	      that while the classic nested relational model identifies nested relations
-	      by arbitrary attribute names, a <b>SliceRelation</b> identifies a
+	      by arbitrary attribute names, a slice relation identifies a
 	      feature table by the intrinsic dimensional footprint of its schema.
 	      This enables a rich set of operators for composing complex analyses
 	      in a declarative, intuitive, and optimizable way.
