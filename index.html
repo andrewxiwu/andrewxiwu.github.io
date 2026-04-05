@@ -41,35 +41,24 @@
 	<tr>
 	  <td colspan="2">
 	    <p>
-	      I am a software engineer at Google Madison, where I lead a team building novel analytical solutions to make data insight
-	      discovery more effective and efficient. Our approach moves beyond the low-level nature of classical relational algebra
-	      by developing a higher-level query language foundation, which in turn provides a more natural and effective target
-	      for automation through generative AI.
-	      Our work was <a href="https://youtu.be/uWbyS0HGkLA?t=165" target="_blank">highlighted</a> in
-	      <em>Future of Data Science</em>, Google Cloud Next 2025. In addition to my core work, I also conduct research in
-	      machine learning and trustworthy AI; please refer to my publications for details.
+	      I am a software engineer at Google Cloud, where I build novel analytical solutions to make data insight discovery more effective and efficient.
+	      My approach moves beyond the low-level nature of classical relational algebra by developing a higher-level query language foundation,
+	      which in turn provides a more natural and effective target for automation through generative AI.
+	      Our work was <a href="https://youtu.be/uWbyS0HGkLA?t=165">highlighted</a> in <i>Future of Data Science</i>, Google Cloud Next 2025.
+	      In addition to my core work, I also conduct research in machine learning and trustworthy AI; please refer to my publications for details.
 	    </p>
 	    <p>
-	      <a href="https://arxiv.org/abs/2311.04824" target="_blank">
-		<b>Multi-Relational Algebra (MRA)</b>
-	      </a>.
-	      As part of our work at Google, we developed Multi-Relational Algebra (MRA),
-	      a minimal and fully compatible extension to relational algebra designed to
-	      address the challenges of entity-centric, multi-granular analytics. MRA
-	      introduces two new data abstractions that allow analysts to reason over
-	      collections of relations. First, the <b>RelationSpace</b> formalizes the
-	      common practice of managing multiple, pre-aggregated tables (materialized
-	      views) at different granularities. It replaces ad-hoc table names with a
-	      principled, schema-level addressing mechanism based on a small set of
-	      designated <em>dimension</em> attributes. Second, the <b>SliceRelation</b>
-	      restructures data into an entity-centric format, aligning each entity
-	      (modeled as a classic tuple called a <em>region</em>) with its multiple,
-	      relation-valued features of different granularities. A key innovation is
-	      that while the classic nested relational model identifies nested relations
-	      by arbitrary attribute names, a slice relation identifies a
-	      feature table by the intrinsic dimensional footprint of its schema.
-	      This enables a rich set of operators for composing complex analyses
-	      in a declarative, intuitive, and optimizable way.
+	      <strong>Grained Relational Algebra (GRA)</strong>. GRA is a minimal, fully compatible extension to relational algebra designed for
+	      multi-grain data analytics.
+	      Analytical data naturally lives at multiple granularities, yet SQL's data model has no container that holds multiple relations at different grains
+	      as a single composable result. This forces users to either join into one flat table — causing silent fan-out errors — or manage separate tables that
+	      do not compose. GRA addresses this structural gap by introducing the <strong>Grained Relation Space (GRS)</strong>:
+	      a principled, schema-level container that organizes relations by their dimensional footprint rather than ad-hoc table names.
+	      Within a GRS, each relation retains its native grain, operators produce a GRS as output (algebraic closure),
+	      and <strong>grain-aware analysis models (GAMs)</strong> encapsulate multi-grain computation as reusable, composable modules.
+	      The result is grain safety by construction: if a required grain is absent, the system produces an explicit error rather than a silent wrong answer.
+	      GRA has been implemented and deployed at Google as a C++ service on F1 Query, serving hundreds of internal teams at scale.
+	      For the formal foundations, see our <a href="https://arxiv.org/abs/2311.04824">paper on arXiv</a>.
 	    </p>
 	    <p>
 	      Prior to Google, I received my Ph.D. in Computer Science from the University of Wisconsin-Madison,
