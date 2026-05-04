@@ -18,6 +18,16 @@
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="favicon.ico"/>
+    <script>
+      function toggleIntro(id) {
+        var element = document.getElementById(id);
+        if (!element.style.display || element.style.display === "none") {
+          element.style.display = "block";
+        } else {
+          element.style.display = "none";
+        }
+      }
+    </script>
     <script type="text/javascript" id="MathJax-script" async
 	    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
     </script>
@@ -46,21 +56,8 @@
 	      I am a software engineer at Google. My current primary interest is the interplay of AI and databases for knowledge extraction, representation,
 	      reasoning, and management.
 	      I am also interested in building higher-level query foundations for multi-granular data analysis. Our work in data analytics was
-	      <a href="https://youtu.be/uWbyS0HGkLA?t=165">highlighted</a> in <i>Future of Data Science</i>, Google Cloud Next 2025. In addition to my core work,
-	      I also conduct research in machine learning and trustworthy AI.
-	    </p>
-	    <p>
-	      <strong>Grained Relational Algebra (GRA)</strong>. GRA is a minimal, fully compatible extension to relational algebra designed for
-	      multi-grain data analytics.
-	      Analytical data naturally lives at multiple granularities, yet SQL's data model has no container that holds multiple relations at different grains
-	      as a single composable result. This forces users to either join into one flat table — causing silent fan-out errors — or manage separate tables that
-	      do not compose. GRA addresses this structural gap by introducing the <strong>Grained Relation Space (GRS)</strong>:
-	      a principled, schema-level container that organizes relations by their dimensional footprint rather than ad-hoc table names.
-	      Within a GRS, each relation retains its native grain, operators produce a GRS as output (algebraic closure),
-	      and <strong>grain-aware analysis models (GAMs)</strong> encapsulate multi-grain computation as reusable, composable modules.
-	      The result is grain safety by design: if a required grain is absent, the system produces an explicit error rather than a silent wrong answer.
-	      GRA has been implemented and deployed at Google as a query service, serving hundreds of internal teams at scale.
-	      For the formal foundations, see our <a href="https://arxiv.org/abs/2311.04824">paper on arXiv</a>.
+	      <a href="https://youtu.be/uWbyS0HGkLA?t=165">highlighted</a> in <i>Future of Data Science</i>, Google Cloud Next 2025 (<a href="https://arxiv.org/abs/2311.04824">our approach</a>).
+	      In addition to my core work, I also conduct research in machine learning and trustworthy AI.
 	    </p>
 	    <p>
 	      Prior to Google, I received my Ph.D. in Computer Science from the University of Wisconsin-Madison,
@@ -80,17 +77,26 @@
 	<tr><td colspan="2" height="3px"></td></tr>
 
 	<tr>
-	  <td align ="left">
+	  <td align="left">
 	    <a class="paper_title" href="https://arxiv.org/pdf/2305.17528" target="_blank">
-	      Two Heads are Actually Better than One: Towards Better Adversarial Robustness via Transduction and Rejection
+	      Two Heads are Actually Better than One: Towards Better Adversarial 
+	      Robustness via Transduction and Rejection
 	    </a><br>
 	    <span class="auth">
 	      Nils Palumbo, Yang Guo, Xi Wu, Jiefeng Chen, Yingyu Liang, Somesh Jha
 	    </span><br>
-	    <a class="publisher" href="https://arxiv.org/pdf/2305.17528" target="_blank">
-	      ICML 2024</a>,
-	    <a class="publisher" href="https://arxiv.org/abs/2305.17528" target="_blank">
-	      arXiv 2023</a>
+	    <a class="publisher" href="https://arxiv.org/pdf/2305.17528" target="_blank">ICML 2024</a>,
+	    <a class="publisher" href="https://arxiv.org/abs/2305.17528" target="_blank">arXiv 2023</a><br><span class="intro-btn" onclick="toggleIntro('icml24-intro')">[short intro]</span>
+	    <div id="icml24-intro" class="paper-intro">
+	      While combining <strong>transduction</strong> and <strong>rejection</strong> 
+	      offers theoretical promises, prior methods often fail in practical deep 
+	      learning settings against strong adversarial attacks. This paper bridges 
+	      this gap by repurposing a reduction technique—originally used to identify 
+	      vulnerabilities—to construct an effective transductive defense. We 
+	      demonstrate improved sample complexity for robust generalization and 
+	      achieve significantly higher robust accuracy (e.g., <strong>81.6%</strong> 
+	      on CIFAR-10) against state-of-the-art attacks like AutoAttack and GMSA.
+	    </div>
 	    <br>
 	  </td>
 	  <td></td>
@@ -113,7 +119,7 @@
 	    <a href="https://openreview.net/pdf?id=UiF3RTES7pU" class="publisher" target="_blank">
 	      AAAI Workshop on Adversarial Machine Learning and Beyond 2022 <b>(Oral Presentation and Best Paper Award)</b>
 	    </a><br>
-	    (<a href="https://github.com/jfc43/stratified-adv-rej" target="_blank">code</a>)
+	    [<a href="https://github.com/jfc43/stratified-adv-rej" target="_blank">code</a>]
 	    <br>
 	  </td>
 	  <td></td>
@@ -123,16 +129,39 @@
 
 	<tr>
 	  <td align ="left">
-	    <a class="paper_title" href="https://openreview.net/pdf?id=rvsbw2YthH_" target="_blank">
-	      The Trade-off between Universality and Label Efficiency of Representations from Contrastive Learning
-	    </a><br>
+	    <div class="paper_title_container">
+	      <a class="paper_title" 
+	         href="https://openreview.net/pdf?id=rvsbw2YthH_" 
+	         target="_blank">
+	        The Trade-off between Universality and Label Efficiency 
+	        of Representations from Contrastive Learning
+	      </a>
+	    </div>
 	    <span class="auth">
-	      Zhenmei Shi, Jiefeng Chen, Kunyang Li, Jayaram Raghuram, Xi Wu, Yingyu Liang, Somesh Jha
+	      Zhenmei Shi, Jiefeng Chen, Kunyang Li, Jayaram Raghuram, 
+	      Xi Wu, Yingyu Liang, Somesh Jha
 	    </span><br>
-	    <a class="publisher" href="https://openreview.net/forum?id=rvsbw2YthH_" target="_blank">
+	    <a class="publisher" 
+	       href="https://openreview.net/forum?id=rvsbw2YthH_" 
+	       target="_blank">
 	      ICLR 2023 <b>(Spotlight)</b>
 	    </a><br>
-            (<a href="https://github.com/zhmeishi/trade-off_contrastive_learning" target="_blank">code</a>)
+	    <span class="intro-btn" 
+	          onclick="toggleIntro('iclr23-intro')">
+	      [short intro]
+	    </span>
+            [<a href="https://github.com/zhmeishi/trade-off_contrastive_learning" 
+                target="_blank">code</a>]
+	    <div id="iclr23-intro" class="paper-intro">
+	      Foundation models aim for both <strong>universality</strong> and 
+	      <strong>label efficiency</strong>, but these goals often conflict. 
+	      This work provides a theoretical analysis showing that 
+	      while diverse pre-training data improves universality, it can 
+	      dilute task-specific features and increase sample complexity. 
+	      We propose a contrastive regularization method to 
+	      navigate this trade-off, validated across multiple 
+	      real-world datasets.
+	    </div>
 	    <br>
 	  </td>
 	  <td></td>
@@ -153,7 +182,7 @@
 	    <a href="https://arxiv.org/abs/2110.14735" class="publisher" target="_blank">
 	      arXiv 2021
 	    </a><br>
-            (<a href="https://github.com/jfc43/eval-transductive-robustness" target="_blank">code</a>)
+            [<a href="https://github.com/jfc43/eval-transductive-robustness" target="_blank">code</a>]
 	    <br>
 	  </td>
 	  <td></td>
@@ -174,7 +203,7 @@
 	    <a class="publisher" href="https://arxiv.org/abs/2106.15728" target="_blank">
 	      arXiv 2021
 	    </a><br>
-            (<a href="https://github.com/jfc43/self-training-ensembles" target="_blank">code</a>)
+            [<a href="https://github.com/jfc43/self-training-ensembles" target="_blank">code</a>]
 	    <br>
 	  </td>
 	  <td></td>
@@ -196,7 +225,7 @@
 	    <a class="publisher" href="http://www.gatsby.ucl.ac.uk/~balaji/udl2020/accepted-papers/UDL2020-paper-081.pdf" target="_blank">
 	      ICML UDL 2020
 	    </a><br>
-            (<a href="https://github.com/jfc43/informative-outlier-mining" target="_blank">code</a>)
+            [<a href="https://github.com/jfc43/informative-outlier-mining" target="_blank">code</a>]
             <br>
 	  </td>
 	  <td></td>
@@ -206,16 +235,38 @@
 
 	<tr>
 	  <td align ="left">
-	    <a class="paper_title" href="http://andrewxiwu.github.io/public/papers/2019/macrobase-sql-VLDB2019.pdf" target="_blank">
-	      DIFF: A Relational Interface to Large-Scale Data Explanation</a><br>
-	    <span class="auth">Firas Abuzaid, Peter Kraft, Sahhana Suri, Edward Gan, Eric Xu,
-	      Atul Shenoy, Avsin Anathanarayan, John Sheu, Erik Meijer, Xi Wu, Jeffrey F. Naughton,
-	      Peter Bailis, Matei Zaharia</span><br>
-	    <a class="publisher" href="https://doi.org/10.1007/s00778-020-00633-6" target="_blank">
+	    <div class="paper_title_container">
+	      <a class="paper_title" 
+		 href="http://andrewxiwu.github.io/public/papers/2019/macrobase-sql-VLDB2019.pdf" 
+		 target="_blank">
+		DIFF: A Relational Interface to Large-Scale Data Explanation
+	      </a>
+	    </div>
+	    <span class="auth">
+	      Firas Abuzaid, Peter Kraft, Sahhana Suri, Edward Gan, Eric Xu,
+	      Atul Shenoy, Avsin Anathanarayan, John Sheu, Erik Meijer, Xi Wu, 
+	      Jeffrey F. Naughton, Peter Bailis, Matei Zaharia
+	    </span><br>
+	    <a class="publisher" 
+	       href="https://doi.org/10.1007/s00778-020-00633-6" 
+	       target="_blank">
 	      The VLDB Journal (2021)</a>,
-	    <a class="publisher" href="http://www.vldb.org/pvldb/vol12/p419-abuzaid.pdf" target="_blank">
+	    <a class="publisher" 
+	       href="http://www.vldb.org/pvldb/vol12/p419-abuzaid.pdf" 
+	       target="_blank">
 	      VLDB 2019 <b>(Invited to "Best of VLDB 2019" Special Issue)</b>
 	    </a>
+	    <br>
+	    <span class="intro-btn" 
+		  onclick="toggleIntro('diff-intro')">
+	      [short intro]
+	    </span>
+	    <div id="diff-intro" class="paper-intro">
+	      DIFF integrates data explanation directly into the relational 
+	      model, allowing analysts to answer "why" questions using 
+	      SQL-like primitives and relational query optimization.
+	    </div>
+	    <br>
 	  </td>
 	  <td></td>
 	</tr>
@@ -232,7 +283,7 @@
 	    <a class="publisher" href="http://proceedings.mlr.press/v119/chalasani20a.html" target="_blank">ICML 2020</a>,
 	    <a class="publisher" href="https://arxiv.org/abs/1810.06583" target="_blank">
 	      arXiv 2018</a><br>
-            (<a href="https://github.com/jfc43/advex" target="_blank">code</a>)
+            [<a href="https://github.com/jfc43/advex" target="_blank">code</a>]
             <br>
 	  </td>
 	  <td></td>
@@ -242,16 +293,43 @@
 
 	<tr>
 	  <td align ="left">
-	    <a class="paper_title" href="https://arxiv.org/pdf/1905.09957.pdf" target="_blank">
-	      Robust Attribution Regularization</a><br>
-	    <span class="auth">Jiefeng Chen, Xi Wu, Vaibhav Rastogi, Yingyu Liang, Somesh Jha</span><br>
-	    <a class="publisher" href="https://papers.nips.cc/paper/9577-robust-attribution-regularization" target="_blank">
+	    <div class="paper_title_container">
+	      <a class="paper_title"
+	         href="https://arxiv.org/pdf/1905.09957.pdf"
+	         target="_blank">
+	        Robust Attribution Regularization
+	      </a>
+	    </div>
+	    <span class="auth">
+	      Jiefeng Chen, Xi Wu, Vaibhav Rastogi, Yingyu Liang, Somesh Jha
+	    </span><br>
+	    <a class="publisher"
+	       href="https://papers.nips.cc/paper/9577-robust-attribution-regularization"
+	       target="_blank">
 	      NeurIPS 2019</a>,
-	    <a class="publisher" href="https://arxiv.org/abs/1905.09957" target="_blank">arXiv 2019</a><br>
-	    (<a href="https://github.com/jfc43/robust-attribution-regularization" target="_blank">code</a>,
-            <a href="http://andrewxiwu.github.io/public/talks/2019/rar-slides.pdf" target="_blank">slides</a>,
-	    <a href="http://andrewxiwu.github.io/public/talks/2019/rar-poster.pdf" target="_blank">poster</a>,
-	    <a href="https://deep.ghost.io/robust-attribution/" target="_blank">Alta Cognita</a>)
+	    <a class="publisher"
+	       href="https://arxiv.org/abs/1905.10900"
+	       target="_blank">
+	      arXiv 2019</a><br>
+	    <span class="intro-btn"
+	          onclick="toggleIntro('rar-intro')">
+	      [short intro]
+	    </span>
+	    [<a href="https://github.com/jfc43/robust-attribution-regularization"
+	        target="_blank">code</a>,
+	    <a href="http://andrewxiwu.github.io/public/talks/2019/rar-slides.pdf"
+	       target="_blank">slides</a>,
+	    <a href="http://andrewxiwu.github.io/public/talks/2019/rar-poster.pdf"
+	       target="_blank">poster</a>,
+	    <a href="https://deep.ghost.io/robust-attribution/"
+	       target="_blank">Alta Cognita</a>]
+	    <div id="rar-intro" class="paper-intro">
+	      This paper proposes <strong>Robust Attribution Regularization (RAR)</strong>,
+	      a training framework that improves the reliability of feature attributions.
+	      By regularizing the model's attributions to be robust against small
+	      input perturbations, we show that models not only become more
+	      interpretable but also achieve better adversarial robustness.
+	    </div>
 	  </td>
 	  <td></td>
 	</tr>
@@ -265,7 +343,7 @@
 	    <span class="auth">Jiefeng Chen, Xi Wu, Vaibhav Rastogi, Yingyu Liang, Somesh Jha</span><br>
 	    <a class="publisher" href="https://doi.org/10.1109/EuroSP.2019.00042" target="_blank" >EuroS&P 2019</a>,
 	    <a class="publisher" href="https://arxiv.org/abs/1805.07816" target="_blank">arXiv 2018</a><br>
-            (<a href="https://github.com/jfc43/pixel-discretization" target="_blank">code</a>)
+            [<a href="https://github.com/jfc43/pixel-discretization" target="_blank">code</a>]
             <br>
 	  </td>
 	  <td></td>
@@ -295,7 +373,7 @@
 	    <span class="auth">Xi Wu, Uyeong Jang, Jiefeng Chen, Lingjiao Chen, Somesh Jha</span><br>
 	    <a class="publisher" href="http://proceedings.mlr.press/v80/wu18e" target="_blank">ICML 2018</a>,
 	    <a class="publisher" href="https://arxiv.org/abs/1711.08001" target="_blank">arXiv 2017</a><br>
-	    (<a href="http://andrewxiwu.github.io/public/talks/2018/confidence-icml2018.pdf" target="_blank">slides</a>)
+	    [<a href="http://andrewxiwu.github.io/public/talks/2018/confidence-icml2018.pdf" target="_blank">slides</a>]
 	  </td>
 	  <td></td>
 	</tr>
@@ -305,11 +383,27 @@
 	<tr>
 	  <td align ="left">
 	    <a class="paper_title" href="http://andrewxiwu.github.io/public/papers/2017/WLKCJN17-bolt-on-differential-privacy-for-scalable-stochastic-gradient-descent-based-analytics.pdf" target="_blank">
-	      Bolt-on Differential Privacy for Scalable Stochastic Gradient Descent-based Analytics</a><br>
-	    <span class="auth">Xi Wu, Fengan Li, Arun Kumar, Kamalika Chaudhuri, Somesh Jha, Jeffrey F. Naughton</span><br>
-	    <a class="publisher" href="https://doi.org/10.1145/3035918.3064047" target="_blank">SIGMOD 2017</a>,
-	    <a class="publisher" href="https://arxiv.org/abs/1606.04722" target="_blank">arXiv 2016</a><br>
-	    (<a href="http://andrewxiwu.github.io/public/talks/2017/sgd-dp-sigmod17.pdf" target="_blank">slides</a>)
+	      Bolt-on Differential Privacy for Scalable Stochastic Gradient 
+	      Descent-based Analytics
+	    </a><br>
+	    <span class="auth">Xi Wu, Fengan Li, Arun Kumar, Kamalika Chaudhuri, 
+	      Somesh Jha, Jeffrey F. Naughton
+	    </span><br>
+	    <a class="publisher" href="https://doi.org/10.1145/3035918.3064047" 
+	       target="_blank">SIGMOD 2017</a>,
+	    <a class="publisher" href="https://arxiv.org/abs/1606.04722" 
+	       target="_blank">arXiv 2016</a><br>
+	    <span class="intro-btn" 
+		  onclick="toggleIntro('dp-intro')">[short intro]</span>
+	    [<a href="http://andrewxiwu.github.io/public/talks/2017/sgd-dp-sigmod17.pdf" target="_blank">slides</a>]
+	    <div id="dp-intro" class="paper-intro">
+	      This paper introduces a <strong>bolt-on</strong> approach to 
+	      differential privacy for SGD-based analytics. It provides 
+	      privacy guarantees without requiring modifications to the 
+	      underlying optimization algorithms, focusing on maintaining 
+	      scalability for large-scale data.
+	    </div>
+	    <br>
 	  </td>
 	  <td></td>
 	</tr>
@@ -352,7 +446,7 @@
 	      A Methodology for Modeling Model-Inversion Attacks</a><br>
 	    <span class="auth">Xi Wu, Matthew Fredrikson, Somesh Jha, Jeffrey F. Naughton</span><br>
 	    <a class="publisher" href="https://doi.org/10.1109/CSF.2016.32" target="_blank">CSF 2016</a><br>
-	    (<a href="http://andrewxiwu.github.io/public/talks/2016/mi.pdf" target="_blank">slides</a>)
+	    [<a href="http://andrewxiwu.github.io/public/talks/2016/mi.pdf" target="_blank">slides</a>]
 	  </td>
 	  <td valign="top" align="center" style="height: 33px" text-indent:100px>
 	  </td>
@@ -401,12 +495,32 @@
 
 	<tr>
 	  <td align ="left">
-	    <a class="paper_title" href="http://andrewxiwu.github.io/public/papers/2012/HW12-weak-compositions-and-their-applications-to-polynomial-lower-bounds-for-kernelization.pdf" target="_blank">
-	      Weak Compositions and Their Applications to Polynomial Lower Bounds for Kernelization</a><br>
+	    <div class="paper_title_container">
+	      <a class="paper_title"
+	         href="http://andrewxiwu.github.io/public/papers/2012/HW12-weak-compositions-and-their-applications-to-polynomial-lower-bounds-for-kernelization.pdf"
+	         target="_blank">
+	        Weak Compositions and Their Applications to
+	        Polynomial Lower Bounds for Kernelization
+	      </a>
+	    </div>
 	    <span class="auth">with Danny Hermelin</span><br>
-	    <a href="https://doi.org/10.1137/1.9781611973099.9" class="publisher" target="_blank">SODA 2012</a>,
-	    <a href="http://eccc.hpi-web.de/report/2011/072/" class="publisher" target="_blank">ECCC 2011</a><br>
-	    (<a href="http://andrewxiwu.github.io/public/talks/2012/klb.pdf" target="_blank">slides</a>)
+	    <a href="https://doi.org/10.1137/1.9781611973099.9"
+	       class="publisher" target="_blank">SODA 2012</a>,
+	    <a href="http://eccc.hpi-web.de/report/2011/072/"
+	       class="publisher" target="_blank">ECCC 2011</a>
+	    <br>
+	    <span class="intro-btn"
+	          onclick="toggleIntro('soda12-intro')">
+	      [short intro]
+	    </span>
+	    [<a href="http://andrewxiwu.github.io/public/talks/2012/klb.pdf"
+	        target="_blank">slides</a>]
+	    <div id="soda12-intro" class="paper-intro">
+	      This paper introduces the <strong>weak composition</strong> framework,
+	      a technique for proving polynomial kernelization lower bounds.
+	      It shows that many parameterized problems are unlikely to have
+	      polynomial-sized kernels unless \(NP \subseteq coNP/poly\).
+	    </div>
 	  </td>
 	  <td valign="top" align="center">
 	  </td>
@@ -442,7 +556,7 @@
 	    <a class="paper_title" href="http://andrewxiwu.github.io/public/papers/2009/FWY09-experimental-study-of-FPT-algorithms-for-the-dfvs-problem.pdf" target="_blank">Experimental Study of FPT Algorithms for the Directed Feedback Vertex Set Problem</a><br>
 	    <span class="auth">with Rudolf Fleischer, Liwei Yuan</span><br>
 	    <a href="https://doi.org/10.1007/978-3-642-04128-0_55" class="publisher" target="_blank">ESA 2009</a><br>
-	    (<a href="http://andrewxiwu.github.io/public/talks/2009/dfvs-ESA09.pdf" target="_blank">slides</a>)
+	    [<a href="http://andrewxiwu.github.io/public/talks/2009/dfvs-ESA09.pdf" target="_blank">slides</a>]
 	  </td>
 	  <td valign="top" align="center">
 	  </td>
@@ -484,15 +598,28 @@
 
 	<tr>
 	  <td align ="left">
-	    <a class="paper_title" href="https://arxiv.org/pdf/2311.04824.pdf" target="_blank">
-	      Multi-Relational Algebra for Multi-Granular Data Analytics
-	    </a><br>
+	    <div class="paper_title_container">
+	      <a class="paper_title" href="https://arxiv.org/pdf/2311.04824.pdf" target="_blank">
+		Multi-Relational Algebra for Multi-Granular Data Analytics
+	      </a>
+	    </div>
 	    <span class="auth">
               Xi Wu, Eugene Wu, Zichen Zhu, Fengan Li, Jeffrey F. Naughton
 	    </span><br>
 	    <a href="https://arxiv.org/abs/2311.04824" class="publisher" target="_blank">
 	      arXiv 2025
-	    </a><br>
+	    </a><br><span class="intro-btn" onclick="toggleIntro('gra-intro')">[short intro]</span>
+	    <div id="gra-intro" class="paper-intro">
+	      <strong> Grained Relational Algebra (GRA) </strong> is a minimal, fully compatible extension to relational algebra designed for multi-grain data analytics.
+	      Analytical data naturally lives at multiple granularities, yet SQL's data model has no container that holds multiple relations at different grains
+	      as a single composable result. This forces users to either join into one flat table — causing silent fan-out errors — or manage separate tables that
+	      do not compose. GRA addresses this structural gap by introducing the <strong>Grained Relation Space (GRS)</strong>:
+	      a principled, schema-level container that organizes relations by their dimensional footprint rather than ad-hoc table names.
+	      Within a GRS, each relation retains its native grain, operators produce a GRS as output (algebraic closure),
+	      and <strong>grain-aware analysis models (GAMs)</strong> encapsulate multi-grain computation as reusable, composable modules.
+	      The result is grain safety by design: if a required grain is absent, the system produces an explicit error rather than a silent wrong answer.
+	      GRA has been implemented and deployed at Google as a query service, serving hundreds of internal teams at scale.
+	    </div>
 	  </td>
 	  <td></td>
 	</tr>

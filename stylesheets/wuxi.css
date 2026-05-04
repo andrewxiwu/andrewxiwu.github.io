@@ -170,3 +170,61 @@ a.paper_title:hover {
   color: #939393;
   text-decoration: none
 }
+
+/* paper intro style */
+.intro-btn {
+  color: #8c1515;
+  cursor: pointer;
+  font-size: 0.85em;
+  font-weight: 600;
+  /* 关键：外边距设为0，确保盒子左边缘对齐上方文字 */
+  margin: 5px 0 0 0; 
+  /* 这里的 padding 会让文字缩进，所以盒子边缘是对齐的 */
+  padding: 2px 6px;
+  border: 1px solid #8c1515;
+  border-radius: 4px;
+  display: inline-block;
+  transition: all 0.2s;
+}
+
+.intro-btn:hover {
+  background-color: #8c1515;
+  color: white;
+}
+
+.paper-intro {
+  display: none;
+  margin-top: 10px;
+  padding: 12px 15px;
+  background-color: #fcfaf8;
+  border-left: 3px solid #8c1515;
+  line-height: 1.6;
+  color: #444;
+}
+
+/* .intro-btn { */
+/*   /\* 颜色和手势 *\/ */
+/*   color: #8c1515; */
+/*   cursor: pointer; */
+/*   /\* 强制左对齐，不留任何边距 *\/ */
+/*   margin: 0; */
+/*   padding: 0; */
+/*   display: inline-block; */
+/*   /\* 字体继承，确保和周围一模一样 *\/ */
+/*   font-family: inherit; */
+/*   font-size: inherit; */
+/* } */
+
+/* .intro-btn:hover { */
+/*   text-decoration: underline; */
+/* } */
+
+/* .paper-intro { */
+/*   display: none; */
+/*   margin-top: 10px; */
+/*   padding: 12px; */
+/*   background-color: #fcfaf8; */
+/*   border-left: 2px solid #8c1515; */
+/*   line-height: 1.6; */
+/*   color: #444; */
+/* } */
