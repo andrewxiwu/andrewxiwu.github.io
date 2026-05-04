@@ -31,6 +31,10 @@
     <script type="text/javascript" id="MathJax-script" async
 	    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
     </script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
   </head>
 
   <body>
@@ -54,7 +58,7 @@
 	  <td colspan="2">
 	    <p>
 	      I am a software engineer at Google. My current primary interest is the interplay of AI and databases for knowledge extraction, representation,
-	      reasoning, and management.
+	      and management, and how to leverage that for reasoning.
 	      I am also interested in building higher-level query foundations for multi-granular data analysis. Our work in data analytics was
 	      <a href="https://youtu.be/uWbyS0HGkLA?t=165">highlighted</a> in <i>Future of Data Science</i>, Google Cloud Next 2025 (<a href="https://arxiv.org/abs/2311.04824">our approach</a>).
 	      In addition to my core work, I also conduct research in machine learning and trustworthy AI.
@@ -79,7 +83,7 @@
 	<tr>
 	  <td align="left">
 	    <a class="paper_title" href="https://arxiv.org/pdf/2305.17528" target="_blank">
-	      Two Heads are Actually Better than One: Towards Better Adversarial 
+	      Two Heads are Actually Better than One: Towards Better Adversarial
 	      Robustness via Transduction and Rejection
 	    </a><br>
 	    <span class="auth">
@@ -88,13 +92,13 @@
 	    <a class="publisher" href="https://arxiv.org/pdf/2305.17528" target="_blank">ICML 2024</a>,
 	    <a class="publisher" href="https://arxiv.org/abs/2305.17528" target="_blank">arXiv 2023</a><br><span class="intro-btn" onclick="toggleIntro('icml24-intro')">[short intro]</span>
 	    <div id="icml24-intro" class="paper-intro">
-	      While combining <strong>transduction</strong> and <strong>rejection</strong> 
-	      offers theoretical promises, prior methods often fail in practical deep 
-	      learning settings against strong adversarial attacks. This paper bridges 
-	      this gap by repurposing a reduction technique—originally used to identify 
-	      vulnerabilities—to construct an effective transductive defense. We 
-	      demonstrate improved sample complexity for robust generalization and 
-	      achieve significantly higher robust accuracy (e.g., <strong>81.6%</strong> 
+	      While combining <strong>transduction</strong> and <strong>rejection</strong>
+	      offers theoretical promises, prior methods often fail in practical deep
+	      learning settings against strong adversarial attacks. This paper bridges
+	      this gap by repurposing a reduction technique—originally used to identify
+	      vulnerabilities—to construct an effective transductive defense. We
+	      demonstrate improved sample complexity for robust generalization and
+	      achieve significantly higher robust accuracy (e.g., <strong>81.6%</strong>
 	      on CIFAR-10) against state-of-the-art attacks like AutoAttack and GMSA.
 	    </div>
 	    <br>
@@ -130,36 +134,36 @@
 	<tr>
 	  <td align ="left">
 	    <div class="paper_title_container">
-	      <a class="paper_title" 
-	         href="https://openreview.net/pdf?id=rvsbw2YthH_" 
+	      <a class="paper_title"
+	         href="https://openreview.net/pdf?id=rvsbw2YthH_"
 	         target="_blank">
-	        The Trade-off between Universality and Label Efficiency 
+	        The Trade-off between Universality and Label Efficiency
 	        of Representations from Contrastive Learning
 	      </a>
 	    </div>
 	    <span class="auth">
-	      Zhenmei Shi, Jiefeng Chen, Kunyang Li, Jayaram Raghuram, 
+	      Zhenmei Shi, Jiefeng Chen, Kunyang Li, Jayaram Raghuram,
 	      Xi Wu, Yingyu Liang, Somesh Jha
 	    </span><br>
-	    <a class="publisher" 
-	       href="https://openreview.net/forum?id=rvsbw2YthH_" 
+	    <a class="publisher"
+	       href="https://openreview.net/forum?id=rvsbw2YthH_"
 	       target="_blank">
 	      ICLR 2023 <b>(Spotlight)</b>
 	    </a><br>
-	    <span class="intro-btn" 
+	    <span class="intro-btn"
 	          onclick="toggleIntro('iclr23-intro')">
 	      [short intro]
 	    </span>
-            [<a href="https://github.com/zhmeishi/trade-off_contrastive_learning" 
+            [<a href="https://github.com/zhmeishi/trade-off_contrastive_learning"
                 target="_blank">code</a>]
 	    <div id="iclr23-intro" class="paper-intro">
-	      Foundation models aim for both <strong>universality</strong> and 
-	      <strong>label efficiency</strong>, but these goals often conflict. 
-	      This work provides a theoretical analysis showing that 
-	      while diverse pre-training data improves universality, it can 
-	      dilute task-specific features and increase sample complexity. 
-	      We propose a contrastive regularization method to 
-	      navigate this trade-off, validated across multiple 
+	      Foundation models aim for both <strong>universality</strong> and
+	      <strong>label efficiency</strong>, but these goals often conflict.
+	      This work provides a theoretical analysis showing that
+	      while diverse pre-training data improves universality, it can
+	      dilute task-specific features and increase sample complexity.
+	      We propose a contrastive regularization method to
+	      navigate this trade-off, validated across multiple
 	      real-world datasets.
 	    </div>
 	    <br>
@@ -236,35 +240,37 @@
 	<tr>
 	  <td align ="left">
 	    <div class="paper_title_container">
-	      <a class="paper_title" 
-		 href="http://andrewxiwu.github.io/public/papers/2019/macrobase-sql-VLDB2019.pdf" 
+	      <a class="paper_title"
+		 href="http://andrewxiwu.github.io/public/papers/2019/macrobase-sql-VLDB2019.pdf"
 		 target="_blank">
 		DIFF: A Relational Interface to Large-Scale Data Explanation
 	      </a>
 	    </div>
 	    <span class="auth">
 	      Firas Abuzaid, Peter Kraft, Sahhana Suri, Edward Gan, Eric Xu,
-	      Atul Shenoy, Avsin Anathanarayan, John Sheu, Erik Meijer, Xi Wu, 
+	      Atul Shenoy, Avsin Anathanarayan, John Sheu, Erik Meijer, Xi Wu,
 	      Jeffrey F. Naughton, Peter Bailis, Matei Zaharia
 	    </span><br>
-	    <a class="publisher" 
-	       href="https://doi.org/10.1007/s00778-020-00633-6" 
+	    <a class="publisher"
+	       href="https://doi.org/10.1007/s00778-020-00633-6"
 	       target="_blank">
 	      The VLDB Journal (2021)</a>,
-	    <a class="publisher" 
-	       href="http://www.vldb.org/pvldb/vol12/p419-abuzaid.pdf" 
+	    <a class="publisher"
+	       href="http://www.vldb.org/pvldb/vol12/p419-abuzaid.pdf"
 	       target="_blank">
 	      VLDB 2019 <b>(Invited to "Best of VLDB 2019" Special Issue)</b>
 	    </a>
 	    <br>
-	    <span class="intro-btn" 
+	    <span class="intro-btn"
 		  onclick="toggleIntro('diff-intro')">
 	      [short intro]
 	    </span>
 	    <div id="diff-intro" class="paper-intro">
-	      DIFF integrates data explanation directly into the relational 
-	      model, allowing analysts to answer "why" questions using 
-	      SQL-like primitives and relational query optimization.
+	      Modern explanation engines often operate as standalone tools,
+	      limiting their interoperability with SQL-based workflows.
+	      We propose <strong>DIFF</strong>, a relational aggregation operator
+	      that unifies data explanation with declarative query processing.
+	      Deployed in production at companies like Microsoft and Facebook,
 	    </div>
 	    <br>
 	  </td>
@@ -324,11 +330,14 @@
 	    <a href="https://deep.ghost.io/robust-attribution/"
 	       target="_blank">Alta Cognita</a>]
 	    <div id="rar-intro" class="paper-intro">
-	      This paper proposes <strong>Robust Attribution Regularization (RAR)</strong>,
-	      a training framework that improves the reliability of feature attributions.
-	      By regularizing the model's attributions to be robust against small
-	      input perturbations, we show that models not only become more
-	      interpretable but also achieve better adversarial robustness.
+	      Standard models often yield fragile interpretations that are easily 
+	      manipulated. This work addresses the problem through 
+	      <strong>axiomatic attribution</strong>, proposing <strong>Robust 
+		Attribution Regularization (RAR)</strong>. By incorporating an 
+	      IG-based objective \(\min_{\theta} \mathbb{E} [ \mathcal{L}(f_\theta(x), y) 
+	      + \lambda \Omega(IG(x)) ]\) into training, we unify robust 
+	      prediction with robust explanation, ensuring that model 
+	      interpretations remain stable even under adversarial conditions.
 	    </div>
 	  </td>
 	  <td></td>
@@ -383,25 +392,28 @@
 	<tr>
 	  <td align ="left">
 	    <a class="paper_title" href="http://andrewxiwu.github.io/public/papers/2017/WLKCJN17-bolt-on-differential-privacy-for-scalable-stochastic-gradient-descent-based-analytics.pdf" target="_blank">
-	      Bolt-on Differential Privacy for Scalable Stochastic Gradient 
+	      Bolt-on Differential Privacy for Scalable Stochastic Gradient
 	      Descent-based Analytics
 	    </a><br>
-	    <span class="auth">Xi Wu, Fengan Li, Arun Kumar, Kamalika Chaudhuri, 
+	    <span class="auth">Xi Wu, Fengan Li, Arun Kumar, Kamalika Chaudhuri,
 	      Somesh Jha, Jeffrey F. Naughton
 	    </span><br>
-	    <a class="publisher" href="https://doi.org/10.1145/3035918.3064047" 
+	    <a class="publisher" href="https://doi.org/10.1145/3035918.3064047"
 	       target="_blank">SIGMOD 2017</a>,
-	    <a class="publisher" href="https://arxiv.org/abs/1606.04722" 
+	    <a class="publisher" href="https://arxiv.org/abs/1606.04722"
 	       target="_blank">arXiv 2016</a><br>
-	    <span class="intro-btn" 
+	    <span class="intro-btn"
 		  onclick="toggleIntro('dp-intro')">[short intro]</span>
 	    [<a href="http://andrewxiwu.github.io/public/talks/2017/sgd-dp-sigmod17.pdf" target="_blank">slides</a>]
 	    <div id="dp-intro" class="paper-intro">
-	      This paper introduces a <strong>bolt-on</strong> approach to 
-	      differential privacy for SGD-based analytics. It provides 
-	      privacy guarantees without requiring modifications to the 
-	      underlying optimization algorithms, focusing on maintaining 
-	      scalability for large-scale data.
+	      Scaling private SGD often involves a trade-off between
+	      model accuracy and system overhead. We remedy this
+	      disconnect with a novel <strong>bolt-on</strong> approach
+	      using output perturbation. By providing a new analysis of
+	      the \(L_2\)-sensitivity of SGD, our algorithm integrates
+	      seamlessly into scalable RDBMS-based systems like
+	      Bismarck, incurring virtually no overhead while yielding
+	      up to <strong>4X better test accuracy</strong>.
 	    </div>
 	    <br>
 	  </td>
@@ -516,10 +528,14 @@
 	    [<a href="http://andrewxiwu.github.io/public/talks/2012/klb.pdf"
 	        target="_blank">slides</a>]
 	    <div id="soda12-intro" class="paper-intro">
-	      This paper introduces the <strong>weak composition</strong> framework,
-	      a technique for proving polynomial kernelization lower bounds.
-	      It shows that many parameterized problems are unlikely to have
-	      polynomial-sized kernels unless \(NP \subseteq coNP/poly\).
+	      Proving polynomial lower bounds for kernelization is a
+	      central challenge in parameterized complexity. We introduce
+	      the framework of <strong>weak compositions</strong> to derive
+	      tight lower bounds for various natural problems, such as
+	      \(d\)-Set Cover and Hitting Set. We also strengthen
+	      super-polynomial bounds to super-quasi-polynomial ones,
+	      linking the existence of efficient kernels to the stability
+	      of the exponential hierarchy.
 	    </div>
 	  </td>
 	  <td valign="top" align="center">
@@ -610,14 +626,17 @@
 	      arXiv 2025
 	    </a><br><span class="intro-btn" onclick="toggleIntro('gra-intro')">[short intro]</span>
 	    <div id="gra-intro" class="paper-intro">
-	      <strong> Grained Relational Algebra (GRA) </strong> is a minimal, fully compatible extension to relational algebra designed for multi-grain data analytics.
-	      Analytical data naturally lives at multiple granularities, yet SQL's data model has no container that holds multiple relations at different grains
-	      as a single composable result. This forces users to either join into one flat table — causing silent fan-out errors — or manage separate tables that
-	      do not compose. GRA addresses this structural gap by introducing the <strong>Grained Relation Space (GRS)</strong>:
-	      a principled, schema-level container that organizes relations by their dimensional footprint rather than ad-hoc table names.
-	      Within a GRS, each relation retains its native grain, operators produce a GRS as output (algebraic closure),
-	      and <strong>grain-aware analysis models (GAMs)</strong> encapsulate multi-grain computation as reusable, composable modules.
-	      The result is grain safety by design: if a required grain is absent, the system produces an explicit error rather than a silent wrong answer.
+	      Analytical data naturally lives at multiple granularities, yet SQL's data model has no container that
+	      holds multiple relations at different grains as a single composable result. This forces users to
+	      either join into one flat table — causing silent fan-out errors — or manage separate tables that
+	      do not compose. <strong> Grained Relational Algebra (GRA) </strong> is a minimal, fully compatible
+	      extension to relational algebra designed for multi-grain data analytics. GRA addresses this structural
+	      gap by introducing the <strong>Grained Relation Space (GRS)</strong>:
+	      a principled, schema-level container that organizes relations by their dimensional footprint
+	      rather than ad-hoc table names. Within a GRS, each relation retains its native grain, operators
+	      produce a GRS as output (algebraic closure), and <strong>grain-aware analysis models (GAMs)</strong>
+	      encapsulate multi-grain computation as reusable, composable modules. The result is grain safety by design:
+	      if a required grain is absent, the system produces an explicit error rather than a silent wrong answer.
 	      GRA has been implemented and deployed at Google as a query service, serving hundreds of internal teams at scale.
 	    </div>
 	  </td>
